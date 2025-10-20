@@ -2,7 +2,7 @@
 
 # lofi-room.sh
 
-**seu cantinho lofi no terminal**
+**seu lofi no terminal**
 
 ---
 
@@ -15,20 +15,12 @@
 
 ---
 
-## ✨ screenshots ✨
+## ✨ screenshots
 
-(coloque aqui um gif ou imagem do seu player rodando)
+![90's-lofi](./images/90's_lofi.png)
+![Tokyo-lofi](./images/tokyo_lofi.png)
 
-```bash
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│   🎵 Tocando Agora...                           │
-│                                                  │
-│   Título:  lofi hip hop radio                  │
-│   Artista: Lofi Girl                         │
-│   Álbum:   beats to relax/study to           │
-│                                                  │
-└──────────────────────────────────────────────────┘
+
 ```
 
 ## 🚀 funcionalidades
