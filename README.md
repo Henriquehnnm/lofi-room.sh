@@ -18,8 +18,8 @@
 ## ✨ screenshots
 
 <p align="center">
-![90's-lofi](./images/90's_lofi.png)
-![Tokyo-lofi](./images/tokyo_lofi.png)
+  <img src="./images/90's_lofi.png" width="49%">
+  <img src="./images/tokyo_lofi.png" width="49%">
 </p> 
 
 ## 🚀 funcionalidades
