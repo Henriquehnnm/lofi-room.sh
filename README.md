@@ -36,17 +36,17 @@
 | Feature | YouTube Music | Spotify | Elisa | Amberol | lofi-room.sh |
 |---------|---------------|---------|-------|---------|--------------|
 | **Offline-first** | ❌ | ❌ | ✅ | ✅ | ✅ |
-| **Sem anúncios** | ❌ (precisa Premium) | ❌ (precisa Premium) | ✅ | ✅ | ✅ |
+| **Sem anúncios** | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Uso de RAM** | ~400-600MB | ~300-500MB | ~150-200MB | ~100-150MB | **~50MB** |
 | **Terminal-based** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Album art** | ✅ | ✅ | ✅ | ✅ | ✅ (ASCII/Sixel) |
+| **Album art** | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Service mode** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Sem internet** | ❌ | ❌ (cache limitado) | ✅ | ✅ | ✅ |
+| **Sem internet** | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Controle total** | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Download integrado** | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **Editor de metadados** | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **Funciona via SSH** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Multiplataforma** | ✅ | ✅ | ✅ (Linux) | ✅ (Linux) | ✅ (Linux/macOS) |
+| **Multiplataforma** | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ### 🎯 quando usar lofi-room.sh?
 
