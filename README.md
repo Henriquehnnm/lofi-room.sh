@@ -1,10 +1,6 @@
-<div align="center">
-
 # lofi-room.sh
 
 **seu lofi no terminal**
-
----
 
 <p>
   um mini estúdio para criar e curtir sua própria coleção de lofi, diretamente do seu terminal.
@@ -12,8 +8,6 @@
 <p>
   baixe do youtube, organize suas faixas e mergulhe na vibe.
 </p>
-
----
 
 ## ✨ screenshots
 
@@ -32,10 +26,10 @@
 
 ## 💿 como usar
 
-1.  Clone este repositório.
-2.  Instale as dependências listadas abaixo.
-3.  Coloque seus arquivos de áudio em `~/Músicas`.
-4.  Execute `./lofi.sh` para iniciar a vibe.
+-  Clone este repositório.
+-  Instale as dependências listadas abaixo.
+-  Coloque seus arquivos de áudio em `~/Músicas`.
+-  Execute `./lofi.sh` para iniciar a vibe.
 
 <details>
   <summary>🔧 dependências</summary>
@@ -49,9 +43,3 @@
   * `dbus-send` (para controlar o player)
 
 </details>
-
-<br>
-
-<p>feito com ♥ no terminal</p>
-
-</div>
