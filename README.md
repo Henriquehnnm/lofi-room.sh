@@ -31,6 +31,32 @@
 -  Coloque seus arquivos de áudio em `~/Músicas`.
 -  Execute `./lofi.sh` para iniciar a vibe.
 
+## 🆚 comparação com outros players
+
+| Feature | YouTube Music | Spotify | Elisa | Amberol | lofi-room.sh |
+|---------|---------------|---------|-------|---------|--------------|
+| **Offline-first** | ❌ | ❌ | ✅ | ✅ | ✅ |
+| **Sem anúncios** | ❌ (precisa Premium) | ❌ (precisa Premium) | ✅ | ✅ | ✅ |
+| **Uso de RAM** | ~400-600MB | ~300-500MB | ~150-200MB | ~100-150MB | **~50MB** |
+| **Terminal-based** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Album art** | ✅ | ✅ | ✅ | ✅ | ✅ (ASCII/Sixel) |
+| **Service mode** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Sem internet** | ❌ | ❌ (cache limitado) | ✅ | ✅ | ✅ |
+| **Controle total** | ❌ | ❌ | ✅ | ✅ | ✅ |
+| **Download integrado** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Editor de metadados** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Funciona via SSH** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Multiplataforma** | ✅ | ✅ | ✅ (Linux) | ✅ (Linux) | ✅ (Linux/macOS) |
+
+### 🎯 quando usar lofi-room.sh?
+
+- ✅ Você quer uma biblioteca **100% offline** sem depender de streaming
+- ✅ Seu PC tem recursos limitados e apps GUI são **muito pesados**
+- ✅ Você vive no **terminal** e não quer alternar pra GUI
+- ✅ Quer **controle total** sobre seus arquivos e metadados
+- ✅ Precisa de um player que funciona **via SSH** em servidores remotos
+- ✅ Curte o **aesthetic terminal** com capas em ASCII art
+
 <details>
   <summary>🔧 dependências</summary>
   
