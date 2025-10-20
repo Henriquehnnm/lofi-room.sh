@@ -3,7 +3,7 @@
 **seu lofi no terminal**
 
 <p>
-  um mini estúdio para criar e curtir sua própria coleção de lofi, diretamente do seu terminal.
+  um mini estúdio para baixar e curtir sua própria coleção de lofi, diretamente do seu terminal.
 </p>
 <p>
   baixe do youtube, organize suas faixas e mergulhe na vibe.
