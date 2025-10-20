@@ -40,7 +40,7 @@
 | **Uso de RAM** | ~400-600MB | ~300-500MB | ~150-200MB | ~100-150MB | **~50MB** |
 | **Terminal-based** | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **Album art** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Service mode** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Service mode** | ❌ | ❌ | ❌ | ✅ | ✅ |
 | **Sem internet** | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Controle total** | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Download integrado** | ❌ | ❌ | ❌ | ❌ | ✅ |
