@@ -47,6 +47,13 @@ check_deps() {
     fi
 }
 
+# Cria um arquivo de playlist com todas as músicas encontradas
+create_playlist() {
+    local playlist_file="$CACHE_DIR/playlist.m3u"
+    find ~/Músicas -maxdepth 1 -type f \( -iname "*.mp3" -o -iname "*.flac" -o -iname "*.ogg" -o -iname "*.wav" \) > "$playlist_file"
+    echo "$playlist_file"
+}
+
 # Extrai metadados do arquivo informado (title, album, artist)
 get_metadata_for_file() {
     local file="$1"
@@ -76,6 +83,7 @@ get_metadata_for_file() {
 # Inicia mpv em background com o arquivo dado. Salva PID e arquivo atual.
 start_play() {
     local file="$1"
+    local playlist_file="$2"
     if [ -z "$file" ] || [ ! -f "$file" ]; then
         gum style --foreground "$RED" "$ICON_ERROR Arquivo inválido: $file"
         return 1
@@ -96,7 +104,7 @@ start_play() {
     fi
 
     # Se não tiver mpv rodando, inicia normalmente
-    nohup mpv --idle --no-video --script="$HOME/.config/mpv/scripts/mpris.lua" "$file" &>> "$LOG_FILE" &
+    nohup mpv --idle --no-video --script="$HOME/.config/mpv/scripts/mpris.lua" --playlist="$playlist_file" --playlist-start=$(grep -nF "$file" "$playlist_file" | cut -d: -f1) --loop-playlist=inf "$file" &>> "$LOG_FILE" &
     local pid=$!
     echo "$pid" > "$PID_FILE"
     printf '%s' "$file" > "$CURRENT_FILE"
@@ -126,6 +134,10 @@ stop_service() {
 
 # Mostra menu principal (anexa ao service se estiver rodando)
 u_main() {
+    # Cria a playlist
+    local playlist_file
+    playlist_file=$(create_playlist)
+
     # Carrega lista de músicas do diretório ~/Músicas (apenas 1º nível)
     mapfile -d '' songs < <(find ~/Músicas -maxdepth 1 -type f \( -iname "*.mp3" -o -iname "*.flac" -o -iname "*.ogg" -o -iname "*.wav" \) -print0)
     if [ ${#songs[@]} -eq 0 ]; then
@@ -229,7 +241,7 @@ done
                         continue
                     fi
                     gum style --foreground "$COMMENT" "Trocando para: $chosen"
-                    start_play "$selected_path"
+                    start_play "$selected_path" "$playlist_file"
                     ;; 
                 " Parar service (encerrar player)")
                     gum confirm --no-show-help --prompt.foreground "$FG" --prompt.background "$BG" --selected.foreground "$FG" --selected.background "$BLUE" --unselected.foreground "$FG" --unselected.background "$BG" "Tem certeza que quer encerrar o service e parar a música?" || continue
@@ -267,7 +279,7 @@ done
                 continue
             fi
             gum style --foreground "$COMMENT" "Iniciando reprodução: $chosen_song_name"
-            start_play "$chosen_song_file"
+            start_play "$chosen_song_file" "$playlist_file"
             # volta ao topo do loop para mostrar UI anexada
             continue
         fi
