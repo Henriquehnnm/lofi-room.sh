@@ -210,7 +210,7 @@ u_main() {
             # 4. Display inside a single box
             gum style --border rounded --margin "1 2" --padding "0" --border-foreground "$COMMENT" "$combined_view"
 
-            action=$(gum choose --no-show-help --header "Opções:" --item.foreground "$FG" --item.background "$BG" --selected.foreground "$FG" --selected.background "$BLUE" --header.foreground "$COMMENT" --header.background "$BG" --cursor.foreground="$BLUE"  \
+            action=$(gum choose --no-show-help --header "Opções:" --item.foreground "$FG" --selected.foreground "$FG" --selected.background "$BLUE" --header.foreground "$COMMENT" --cursor.foreground="$BLUE"  \
                 "$ICON_PLAY_PAUSE Pause/Play" \
                 "$ICON_MUSIC Selecionar outra música" \
                 " Parar service (encerrar player)" \
@@ -224,7 +224,7 @@ u_main() {
                     ;; 
                 "$ICON_MUSIC Selecionar outra música")
                     # escolhe nova música do diretório
-                    chosen=$(gum choose --header "Selecione outra música:" --no-show-help --item.foreground "$FG" --item.background "$BG" --selected.foreground "$FG" --selected.background "$BLUE" --header.foreground "$COMMENT" --header.background "$BG" --cursor.foreground="$BLUE" "${song_names[@]}" "$ICON_EXIT Cancelar")
+                    chosen=$(gum choose --header "Selecione outra música:" --no-show-help --item.foreground "$FG" --selected.foreground "$FG" --selected.background "$BLUE" --header.foreground "$COMMENT" --cursor.foreground="$BLUE" "${song_names[@]}" "$ICON_EXIT Cancelar")
                     if [ -z "$chosen" ] || [[ "$chosen" == "$ICON_EXIT Cancelar" ]]; then
                         continue
                     fi
@@ -244,7 +244,7 @@ done
                     start_play "$selected_path" "$playlist_file"
                     ;; 
                 " Parar service (encerrar player)")
-                    gum confirm --no-show-help --prompt.foreground "$FG" --prompt.background "$BG" --selected.foreground "$FG" --selected.background "$BLUE" --unselected.foreground "$FG" --unselected.background "$BG" "Tem certeza que quer encerrar o service e parar a música?" || continue
+                    gum confirm --no-show-help --prompt.foreground "$FG" --selected.foreground "$FG" --selected.background "$BLUE" --unselected.foreground "$FG" "Tem certeza que quer encerrar o service e parar a música?" || continue
                     stop_service
                     gum style --foreground "$GREEN" "Service encerrado."
                     return 0
@@ -261,7 +261,7 @@ done
             esac
         else
             # Sem service rodando: escolher música para iniciar
-            chosen_song_name=$(gum choose --no-show-help --header "Escolha uma música:" --item.foreground "$FG" --item.background "$BG" --selected.foreground "$FG" --selected.background "$BLUE" --header.foreground "$COMMENT" --header.background "$BG" --cursor.foreground="$BLUE" "${song_names[@]}" "$ICON_EXIT Sair")
+            chosen_song_name=$(gum choose --no-show-help --header "Escolha uma música:" --item.foreground "$FG" --selected.foreground "$FG" --selected.background "$BLUE" --header.foreground "$COMMENT" --cursor.foreground="$BLUE" "${song_names[@]}" "$ICON_EXIT Sair")
             if [[ "$chosen_song_name" == "$ICON_EXIT Sair" ]] || [[ -z "$chosen_song_name" ]]; then
                 gum style --foreground "$COMMENT" "Nada feito. Tchau~"
                 return 0
