@@ -75,9 +75,9 @@ get_metadata_for_file() {
     album=${album:-"Álbum Desconhecido"}
     artist=${artist:-"Artista Desconhecido"}
     printf '{"title":"%s","album":"%s","artist":"%s"}' \
-        "$(printf '%s' "$title" | sed 's/"/\"/g')" \
-        "$(printf '%s' "$album" | sed 's/"/\"/g')" \
-        "$(printf '%s' "$artist" | sed 's/"/\"/g')"
+        "$(printf '%s' "$title" | sed 's/"/\\"/g')" \
+        "$(printf '%s' "$album" | sed 's/"/\\"/g')" \
+        "$(printf '%s' "$artist" | sed 's/"/\\"/g')"
 }
 
 # Inicia mpv em background com o arquivo dado. Salva PID e arquivo atual.
