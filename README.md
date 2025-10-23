@@ -14,39 +14,39 @@
 <p align="center">
   <img src="./images/90's_lofi.png" width="49%">
   <img src="./images/tokyo_lofi.png" width="49%">
-</p> 
+</p>
 
 ## 🚀 funcionalidades
 
-| Script | Descrição |
-| --- | --- |
-| `down.sh` | Baixe áudios de vídeos do YouTube em formato MP3. |
+| Script        | Descrição                                                        |
+| ------------- | ---------------------------------------------------------------- |
+| `down.sh`     | Baixe áudios de vídeos do YouTube em formato MP3.                |
 | `edit-mp3.sh` | Edite os metadados (título, artista, álbum) e adicione uma capa. |
-| `lofi.sh` | Player com UI no terminal, exibindo capa e informações da faixa. |
+| `lofi.sh`     | Player com UI no terminal, exibindo capa e informações da faixa. |
 
 ## 💿 como usar
 
--  Clone este repositório.
--  Instale as dependências listadas abaixo.
--  Coloque seus arquivos de áudio em `~/Músicas`.
--  Execute `./lofi.sh` para iniciar a vibe.
+- Clone este repositório.
+- Instale as dependências listadas abaixo.
+- Coloque seus arquivos de áudio em `~/Músicas`.
+- Execute `./lofi.sh` para iniciar a vibe.
 
 ## 🆚 comparação com outros players
 
-| Feature | YouTube Music | Spotify | Elisa | Amberol | lofi-room.sh |
-|---------|---------------|---------|-------|---------|--------------|
-| **Offline-first** | ❌ | ❌ | ✅ | ✅ | ✅ |
-| **Sem anúncios** | ❌ | ❌ | ✅ | ✅ | ✅ |
-| **Uso de RAM** | ~400-600MB | ~300-500MB | ~150-200MB | ~100-150MB | **~50MB** |
-| **Terminal-based** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Album art** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Service mode** | ❌ | ❌ | ❌ | ✅ | ✅ |
-| **Sem internet** | ❌ | ❌ | ✅ | ✅ | ✅ |
-| **Controle total** | ❌ | ❌ | ✅ | ✅ | ✅ |
-| **Download integrado** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Editor de metadados** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Funciona via SSH** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Multiplataforma** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Feature                 | YouTube Music | Spotify    | Elisa      | Amberol    | lofi-room.sh |
+| ----------------------- | ------------- | ---------- | ---------- | ---------- | ------------ |
+| **Offline-first**       | ❌            | ❌         | ✅         | ✅         | ✅           |
+| **Sem anúncios**        | ❌            | ❌         | ✅         | ✅         | ✅           |
+| **Uso de RAM**          | ~400-600MB    | ~300-500MB | ~150-200MB | ~100-150MB | **~50MB**    |
+| **Terminal-based**      | ❌            | ❌         | ❌         | ❌         | ✅           |
+| **Album art**           | ✅            | ✅         | ✅         | ✅         | ✅           |
+| **Service mode**        | ❌            | ❌         | ❌         | ✅         | ✅           |
+| **Sem internet**        | ❌            | ❌         | ✅         | ✅         | ✅           |
+| **Controle total**      | ❌            | ❌         | ✅         | ✅         | ✅           |
+| **Download integrado**  | ❌            | ❌         | ❌         | ❌         | ✅           |
+| **Editor de metadados** | ❌            | ❌         | ❌         | ❌         | ✅           |
+| **Funciona via SSH**    | ❌            | ❌         | ❌         | ❌         | ✅           |
+| **Multiplataforma**     | ✅            | ✅         | ✅         | ✅         | ✅           |
 
 ### 🎯 quando usar lofi-room.sh?
 
@@ -61,6 +61,7 @@
   <summary>🔧 dependências</summary>
   
   * `mpv` (o player de áudio)
+  * `mpv-mpris` (integração com o media player do sistema)
   * `yt-dlp` (para baixar do YouTube)
   * `ffmpeg` (para edição de metadados e extração de capa)
   * `gum` (para a interface no terminal)
